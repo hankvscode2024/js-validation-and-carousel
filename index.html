@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet"  href="style.css">
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <div class="con1">
+      <div class="frin">
+        <div class="head">
+          <h1>REGISTRATION FORM</h1>
+        </div>
+        <BR><BR>
+
+        <form id="regf">
+
+          <div class="ele">
+            <span aria-label="required">*</span>
+            <label for="firstname">First Name:</label><br>
+            <input
+            type="text" 
+            id="firstname" 
+            name="Firstname" 
+            required
+            placeholder="like- Harsh"
+            minlength="2"
+            maxlength="20"
+            autofill>
+          </div>
+
+          <div class="ele">
+            <span aria-label="required">*</span>
+            <label for="lastname">Last Name:</label><br>
+            <input 
+            type="text" 
+            id="lastname" 
+            name="Lastname" 
+            required
+            placeholder="like- Verma"
+            minlength="2"
+            maxlength="20"
+            autofill>
+          </div>
+
+          <div class="ele">
+            <span aria-label="required">*</span>
+            <label for="mail">E-Mail:</label><br>
+            <input 
+            type="email" 
+            id="mail" 
+            name="Email" 
+            required
+            placeholder="like- xyz@gmail.com"
+            minlength="8"
+            maxlength="30"
+            autofill>
+            <br>
+            <span class="error" id="emailError"></span>
+          </div>
+
+          <div class="ele">
+            <span aria-label="required">*</span>
+            <label for="pass">Password:</label><br>
+            <input 
+            type="password" 
+            id="pass" 
+            name="Password" 
+            required
+            minlength="8"
+            maxlength="16">
+            <br>
+            <label for="togglePassword">
+              <input type="checkbox" id="togglePassword"> Show Password
+            </label>
+
+            <div class="strengthbar">
+              <div class="strength" id="strbar"></div>
+            </div>
+
+            <br>
+            <span class="error" id="passwordError"></span>
+          </div>
+
+          <div class="ele">
+            <span aria-label="required">*</span>
+            <label for="confirm_pass">Confirm-Password:</label><br>
+            <input 
+            type="text" 
+            id="confirm_pass" 
+            name="Confirm-Password" 
+            required
+            minlength="8"
+            maxlength="16">
+            <br>
+            <span class="error" id="confirmPasswordError"></span>
+          </div>
+
+          <div class="sub_button">
+            <button id="sub">Register</button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+    <div class="con2">
+      <div class="left">
+          <img src="arrow.png" height="30%" width="30%">
+      </div>
+      <div class="slider">
+          <div class="images fade">
+              <img src="pikachu.png" width="60%" height="100%" alt="img1" name="imagess">
+          </div>
+          <div class="images fade">
+              <img src="lizard.png" width="60%" height="100%" alt="img1" name="imagess">
+          </div>
+          <div class="images fade">
+              <img src="squad.png" width="60%" height="100%" alt="img1" name="imagess">
+          </div>
+          <div class="images fade">
+              <img src="group.png" width="60%" height="100%" alt="img1" name="imagess">
+          </div>
+      </div>
+      <div class="right">
+          <img src="right-arrow.png" height="30%" width="30%">
+      </div>
+  </div>
+
+<div class="con3">
+  <div class="starcon">
+  <div class="star" onclick="sel(1)">★</div>
+  <div class="star" onclick="sel(2)">★</div>
+  <div class="star" onclick="sel(3)">★</div>
+  <div class="star" onclick="sel(4)">★</div>
+  <div class="star" onclick="sel(5)">★</div>
+  </div>
+</div>
+
+<script>
+let stars = document.getElementsByClassName("star");
+
+function sel(n) {
+    // Reset all stars to their original class
+    for (let i = 0; i < stars.length; i++) {
+        stars[i].className = "star"; // Reset to original class
+    }
+    // Set the class for the selected stars
+    for (let i = n-1; i >= 0; i--) {
+        stars[i].className = "staring"; // Change class name
+    }
+}
+</script>
+
+</body>
+</html>
